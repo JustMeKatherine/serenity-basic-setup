@@ -1,0 +1,14 @@
+# IDEs
+*.iml
+.idea
+.project
+.settings
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# Maven
+target
+
+# OS
+.DS_Store
