@@ -15,7 +15,8 @@ public class TodoPage extends PageObject {
     public static final String ACTION_ROW_LABEL = "//label[contains(.,'%s')]";
 
     public void addAnActionCalled(String actionName) {
-        $("#new-todo").type(actionName)
+        $("input[class*='new-todo']").type(actionName)
+//        $("#new-todo").type(actionName)
                 .then().sendKeys(Keys.ENTER);
     }
 
