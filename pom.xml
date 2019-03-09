@@ -15,11 +15,11 @@
         <serenity.maven.version>1.1.22-rc.9</serenity.maven.version>
         <serenity.cucumber.version>1.1.2</serenity.cucumber.version>
         <webdriver.driver>chrome</webdriver.driver>
-        <!--<webdriver.driver>firefox</webdriver.driver>-->
-        <parallel.tests>2</parallel.tests>
+        <!-- <webdriver.chrome.driver>C:\git\chromedriver.exe</webdriver.chrome.driver> -->
+        <parallel.tests>1</parallel.tests>
     </properties>
 
-    
+
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -96,6 +96,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
+                    <systemPropertyVariables>
+                        <webdriver.driver>chrome</webdriver.driver>
+                    </systemPropertyVariables>
                     <skip>true</skip>
                 </configuration>
             </plugin>
