@@ -1,6 +1,7 @@
 package net.serenitybdd.demos.todos.cucumber.stepdefinitions;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 import net.serenitybdd.demos.todos.tasks.AddItems;
 import net.serenitybdd.demos.todos.tasks.CompleteItem;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
@@ -26,6 +27,7 @@ public class DeleteTodoStepDefinitions {
     }
 
     @Given("^(.*) has marked the (.*) action as complete$")
+//    @When("^I mark the (.*) action as complete$")
     public void i_have_marked_the_action_as_complete(String actor, String itemName) throws Throwable {
         theActorNamed(actor).attemptsTo(CompleteItem.called(itemName));
     }
